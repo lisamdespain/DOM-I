@@ -40,7 +40,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
-const links = document.querySelectorAll('nav a');
+const links = document.querySelectorAll('header nav a');
 links[0].textContent = 'Services';
 links[1].textContent = 'Product';
 links[2].textContent = 'Vision';
@@ -61,20 +61,32 @@ logoImage.src = 'http://localhost:9000/img/logo.png';
 const ctaImage = document.querySelector('#cta-img');
 ctaImage.src = 'http://localhost:9000/img/cta.png';
 
-// const accentImage = document.querySelector('#accent-img');
-// accentImage.src = 'http://localhost:9000/img/accent.png';
+const accentImage = document.querySelector('.middle-img');
+accentImage.src = 'http://localhost:9000/img/accent.png';
 
-const topContentHeader = document.querySelectorAll('.top-content h4');
-const topContentText = document.querySelectorAll('.top-content p');
+const topContentHeader = document.querySelectorAll('.top-content .text-content h4');
+const topContentText = document.querySelectorAll('.top-content .text-content p');
 topContentHeader[0].textContent = (siteContent['main-content']['features-h4']);
 topContentText[0].textContent = (siteContent['main-content']['features-content']);
 topContentHeader[1].textContent = (siteContent['main-content']['about-h4']);
 topContentText[1].textContent = (siteContent['main-content']['about-content']);
-const bottomContentHeader = document.querySelectorAll('.bottom-content h4');
-const bottomContentText = document.querySelectorAll('.bottom-content p');
+const bottomContentHeader = document.querySelectorAll('.bottom-content .text-content h4');
+const bottomContentText = document.querySelectorAll('.bottom-content .text-content p');
 bottomContentHeader[0].textContent = (siteContent['main-content']['services-h4']);
 bottomContentText[0].textContent = (siteContent['main-content']['services-content']);
 bottomContentHeader[1].textContent = (siteContent['main-content']['product-h4']);
 bottomContentText[1].textContent = (siteContent['main-content']['product-content']);
 bottomContentHeader[2].textContent = (siteContent['main-content']['vision-h4']);
 bottomContentText[2].textContent = (siteContent['main-content']['vision-content']);
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = (siteContent['contact']['contact-h4']);
+
+const contactText = document.querySelectorAll('.contact p');
+contactText[0].textContent = (siteContent['contact']['address']);
+contactText[1].textContent = (siteContent['contact']['phone']);
+contactText[2].textContent = (siteContent['contact']['email']);
+
+const copyright = document.querySelector('footer a');
+copyright.textContent = (siteContent['footer']['copyright']);
+copyright.className = 'bold';
+links.forEach((link) => link.className = 'italic');
