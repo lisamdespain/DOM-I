@@ -40,3 +40,41 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+const links = document.querySelectorAll('nav a');
+links[0].textContent = 'Services';
+links[1].textContent = 'Product';
+links[2].textContent = 'Vision';
+links[3].textContent = 'Features';
+links[4].textContent = 'About';
+links[5].textContent = 'Contact';
+
+
+const ctaHeader = document.querySelector('.cta h1')
+ctaHeader.textContent = 'DOM Is Awesome';
+
+const ctaButton = document.querySelector('.cta button')
+ctaButton.textContent = 'Get Started';
+
+const logoImage = document.querySelector('#logo-img');
+logoImage.src = 'http://localhost:9000/img/logo.png';
+
+const ctaImage = document.querySelector('#cta-img');
+ctaImage.src = 'http://localhost:9000/img/cta.png';
+
+// const accentImage = document.querySelector('#accent-img');
+// accentImage.src = 'http://localhost:9000/img/accent.png';
+
+const topContentHeader = document.querySelectorAll('.top-content h4');
+const topContentText = document.querySelectorAll('.top-content p');
+topContentHeader[0].textContent = (siteContent['main-content']['features-h4']);
+topContentText[0].textContent = (siteContent['main-content']['features-content']);
+topContentHeader[1].textContent = (siteContent['main-content']['about-h4']);
+topContentText[1].textContent = (siteContent['main-content']['about-content']);
+const bottomContentHeader = document.querySelectorAll('.bottom-content h4');
+const bottomContentText = document.querySelectorAll('.bottom-content p');
+bottomContentHeader[0].textContent = (siteContent['main-content']['services-h4']);
+bottomContentText[0].textContent = (siteContent['main-content']['services-content']);
+bottomContentHeader[1].textContent = (siteContent['main-content']['product-h4']);
+bottomContentText[1].textContent = (siteContent['main-content']['product-content']);
+bottomContentHeader[2].textContent = (siteContent['main-content']['vision-h4']);
+bottomContentText[2].textContent = (siteContent['main-content']['vision-content']);
